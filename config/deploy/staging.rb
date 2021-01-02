@@ -1,5 +1,5 @@
 set :rails_env, "staging"
-set :branch, "master"
+set :branch, "main"
 
 ##
 # We use the CAPISTRANO_DEPLOY_TO_LOCAL_DIR environment variable to signal to
