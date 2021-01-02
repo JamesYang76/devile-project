@@ -79,6 +79,15 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+staging:
+  <<: *default
+  database: devile_project_staging
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASS'] %>
+  host: <%= ENV['PGHOST'] %>
+  post: 5432
+
+
 production:
   <<: *default
   database: devile_project_production
