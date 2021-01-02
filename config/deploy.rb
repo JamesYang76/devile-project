@@ -52,7 +52,7 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w[rake gem bundle ruby rails]
 
 set :assets_roles, [:app] # defaults to [:web]
-set :migration_role, :app
+#set :migration_role, :app
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
