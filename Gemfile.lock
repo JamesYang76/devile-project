@@ -62,6 +62,8 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    airbrussh (1.4.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     aws-eventstream (1.1.0)
     aws-partitions (1.414.0)
     aws-sdk-core (3.110.0)
@@ -79,6 +81,23 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
+    capistrano (3.14.1)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (2.0.1)
+      capistrano (~> 3.1)
+    capistrano-locally (0.2.6)
+      capistrano (~> 3.0)
+    capistrano-rails (1.6.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (>= 1.1, < 3)
+    capistrano-rake (0.2.0)
+      capistrano (>= 3.0)
+    capistrano-rbenv (2.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     capybara (3.34.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -90,6 +109,10 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.14.2)
     globalid (0.4.2)
@@ -115,6 +138,9 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     msgpack (1.3.3)
+    net-scp (3.0.0)
+      net-ssh (>= 2.6.5, < 7.0.0)
+    net-ssh (6.1.0)
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
@@ -183,6 +209,9 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sshkit (1.21.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thor (1.0.1)
     tilt (2.0.10)
     tzinfo (2.0.4)
@@ -215,7 +244,14 @@ DEPENDENCIES
   aws-sdk-ec2
   bootsnap (>= 1.4.4)
   byebug
+  capistrano
+  capistrano-bundler
+  capistrano-locally
+  capistrano-rails
+  capistrano-rake
+  capistrano-rbenv
   capybara (>= 3.26)
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)

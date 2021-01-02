@@ -2,7 +2,7 @@ require_relative "../lib/aws_helper"
 require "dotenv/load"
 
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.12.0"
+lock "~> 3.14"
 
 set :application, "devile-project"
 set :repo_url,    "git@github.com:JamesYang76/devile-project.git"
